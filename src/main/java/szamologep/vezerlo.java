@@ -198,7 +198,7 @@ public class vezerlo {
         public gombKlikk(String gomb) {
         }
 
-        public gombKlikk() {
+       public gombKlikk() {
 
         }
 
@@ -207,7 +207,7 @@ public class vezerlo {
             //System.out.println(e.toString());
 
             kiiro.setText(kiiro.getText() + e.getActionCommand());
-
+            System.out.println(e.getActionCommand());
         }
     }
 

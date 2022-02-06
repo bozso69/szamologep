@@ -4,9 +4,12 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.io.ByteArrayInputStream;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class MainTest {
+    Main mainTest;
 
     @BeforeEach
     void setUp() {
@@ -18,6 +21,9 @@ class MainTest {
 
     @Test
     void main() {
+        ByteArrayInputStream in = new ByteArrayInputStream("vezerlo".getBytes());
+        System.setIn(in);
+        mainTest.main(new String[] {"vezerlo"});
 
     }
 }
