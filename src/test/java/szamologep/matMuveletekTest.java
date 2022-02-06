@@ -21,12 +21,30 @@ class matMuveletekTest {
     }
 
     @Test
-    void osszeadas() {
+    @DisplayName("Összeadás teszt")
+    void testOsszeadas() {
+        assertEquals("10.0", mMuveletek.osszeadas("5","5"));
     }
 
     @Test
-    @DisplayName("Összeadás teszt")
-    void testOsszeadas() {
-        assertEquals("10.0", mMuveletek.osszeadas("5","5") );
+    @DisplayName("Kivonás teszt")
+    void kivonas() {
+        assertEquals("10.0", mMuveletek.kivonas("20","10"));
+        assertEquals("-10.0", mMuveletek.kivonas("20","30"));
+    }
+
+
+    @Test
+    @DisplayName("Szorzás teszt")
+    void sorzas() {
+        assertEquals("200.0", mMuveletek.sorzas("20","10"));
+        assertEquals("-200.0", mMuveletek.sorzas("20","-10"));
+    }
+
+    @Test
+    @DisplayName("Osztás teszt")
+    void osztas() {
+        assertEquals("2.0", mMuveletek.osztas("20","10"));
+
     }
 }

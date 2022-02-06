@@ -81,9 +81,21 @@ public class util {
 	private String MuveletEldonto(String szam1, String szam2, char muvelet) {
 		mMuvelete = new matMuveletek();
 
-		if (muvelet == '+'){
-		return mMuvelete.osszeadas(szam1,szam2);
-	}
+
+		switch (muvelet){
+			case '+':
+				return mMuvelete.osszeadas(szam1,szam2);
+
+			case '-':
+				return mMuvelete.kivonas(szam1,szam2);
+
+			case 'X':
+				return mMuvelete.sorzas(szam1,szam2);
+			case '/':
+				return mMuvelete.osztas(szam1,szam2);
+			default:;
+		}
+
 	return null;}
 
 	private boolean tartalmazE(char elem, String feltetel) {
